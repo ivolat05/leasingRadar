@@ -139,6 +139,7 @@
 	justify-content: center;
 
 	align-items: flex-start;
+	overflow: hidden;
 
 	@media(max-width:1080px) {
 		grid-template-columns: 1fr 350px;
@@ -151,12 +152,15 @@
 		padding: 0;
 		background: none;
 		border: none;
+		overflow: initial;
 	}
 
 }
 
 .contact {
 	padding-top: 130px;
+	isolation: isolate;
+
 
 	@media(max-width:992px) {
 		padding-top: 50px;
@@ -167,5 +171,27 @@
 	@media(max-width:572px) {
 		padding-top: 20px;
 		margin-top: 20px;
+	}
+}
+
+.contact__head {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 80px;
+		height: 80px;
+
+		background: #589FFF;
+		filter: blur(70px);
+		z-index: -3;
+		left: 0;
+		top: 0;
+		transform: translate(-50%, 10%);
+
+		@media(max-width:800px) {
+			left: 70%;
+		}
 	}
 }
