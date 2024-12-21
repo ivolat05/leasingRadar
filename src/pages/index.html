@@ -6,12 +6,20 @@
 )
 
 <body>
-	@@include("../html/header/header.html" )
-	<main
-		style="display:flex; align-items:center; justify-content:center;padding:0; margin:0;  height:100vh; background:black; font-size:100px; text-align:center; color:#fff;">
-		HELLO WORLD
-	</main>
-	@@include("../html/footer/footer.html")
+	<div class="page">
+		@@include("../html/header.html" )
+		<main>
+			@@include("../html/main.html")
+			@@include("../html/basic.html")
+			@@include("../html/advant.html")
+			@@include("../html/results.html")
+			@@include("../html/choose.html")
+			@@include("../html/contact.html")
+		</main>
+		@@include("../html/footer.html")
+		@@include("../html/modal.html")
+	</div>
+
 	<script src="../assets/js/app.min.js"></script>
 </body>
 

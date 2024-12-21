@@ -1,0 +1,173 @@
+.advant {
+	padding-top: 95px;
+	isolation: isolate;
+
+	@media(max-width:572px) {
+		padding-top: 45px;
+	}
+}
+
+.advant__wrapp {
+	padding-top: 45px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	position: relative;
+	gap: 40px;
+
+	@media(max-width:1180px) {
+		gap: 15px;
+	}
+
+	@media(max-width:1080px) {
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+	}
+
+	@media(max-width:572px) {
+		padding-top: 24px;
+
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 120px;
+		height: 120px;
+		background: rgba(106, 202, 173, 0.6);
+		filter: blur(80px);
+		left: 35%;
+		top: -10%;
+		transform: translate(-50%, -50%);
+		z-index: -3;
+
+		@media(max-width:572px) {
+			background: none;
+		}
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 63px;
+		height: 63px;
+
+		background: rgba(106, 202, 173, 0.4);
+		filter: blur(40px);
+		top: 10px;
+		right: 0;
+		z-index: -3;
+		transform: translateX(-100%);
+
+		@media(max-width:572px) {
+			background: none;
+		}
+	}
+}
+
+.advant__cart {
+	padding: 28px;
+
+	background: rgba(206, 222, 255, 0.07);
+	border: 1px solid rgba(206, 222, 255, 0.15);
+	border-radius: 16px;
+	display: flex;
+	align-items: flex-start;
+
+	@media(max-width:1080px) {
+		width: calc(50% - 8px);
+		padding: 12px 20px;
+		border-radius: 12px;
+	}
+
+	@media(max-width:700px) {
+		width: 100%;
+	}
+}
+
+.advant__cart-img {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	flex-shrink: 0;
+	width: 44px;
+	height: 44px;
+	margin-right: 20px;
+	position: relative;
+
+	&::after {
+		content: "";
+		border-radius: 50%;
+		z-index: -2;
+		position: absolute;
+		width: 48px;
+		height: 48px;
+		background: #6ACAAD;
+		filter: blur(35px);
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+
+		@media(max-width:572px) {
+			width: 24px;
+			height: 24px;
+		}
+
+
+	}
+
+	img,
+	svg {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		flex-shrink: 0;
+	}
+
+	@media(max-width:572px) {
+		width: 24px;
+		height: 24px;
+		margin-right: 10px;
+	}
+
+}
+
+.advant__cart-title {
+
+	font-family: 'Onest';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 150%;
+	color: #FFFFFF;
+
+	@media(max-width:572px) {
+		font-size: 18px;
+	}
+
+}
+
+.advant__cart-text {
+
+	font-family: 'Onest';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 150%;
+
+	color: #A9ADB6;
+	padding-top: 10px;
+
+	@media(max-width:572px) {
+		padding-top: 5px;
+	}
+}
+
+.advant__cart-coll {
+	padding-top: 10px;
+
+	@media(max-width:572px) {
+		padding-top: 0;
+	}
+
+}

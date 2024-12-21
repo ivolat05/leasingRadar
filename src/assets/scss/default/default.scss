@@ -26,9 +26,7 @@ button {
 }
 
 html {
-	overflow-x: hidden;
-	overflow-y: scroll;
-	scrollbar-gutter: stable;
+	background: #0E1729;
 
 	&._fixed {
 		overflow: hidden;
@@ -63,4 +61,56 @@ select {
 
 time {
 	display: block;
+}
+
+.container {
+	max-width: 1240px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+* {
+	&::-webkit-scrollbar-thumb {
+		width: 4px;
+		border-radius: 10px;
+		background: #3085FA;
+		cursor: grab;
+	}
+
+	&::-webkit-scrollbar {
+		width: 4px;
+		border-radius: 10px;
+		background: rgba(32, 76, 175, 0.05);
+	}
+}
+
+
+
+@-moz-document url-prefix() {
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: #3085FA rgba(32, 76, 175, 0.05);
+
+		&::-webkit-scrollbar-thumb {
+			width: 4px;
+			background: #3085FA;
+			border-radius: 10px;
+		}
+
+		&::-webkit-scrollbar {
+			width: 4px;
+			background: rgba(32, 76, 175, 0.05);
+		}
+
+		&::-moz-scrollbar {
+			width: 4px;
+		}
+
+		.scrollable-content::-moz-scrollbar-thumb {
+			background: #3085FA;
+			border-radius: 10px;
+		}
+	}
 }
